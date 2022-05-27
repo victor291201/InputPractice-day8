@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+*,*::after,*::before{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
+}
+input{
+  width: 200px;
+  height: 35px;
+  font-weight: bolder;
+  padding:5px;
+}
+input::placeholder{
+  color:black;
+}
+div{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  flex-direction: column;
+}
+label{
+  text-align: start;
+  width: 200px;
+}
+.inpt-1{
+  position: relative;
+  border:none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+.ctn-1{
+  position: relative;
+}
+.lbl-1{
+  padding: 5px;
+  position: absolute;
+  top:3px;
+  left: 2px;
+  width: 45px;
+  transition: 1s transform ease;
+}
+.spn-1{
+  width: 200px;
+  position: absolute;
+  bottom:0px;
+}
+.spn-1::before{
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: crimson;
+  z-index: 100;
+  bottom: 0px;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: 2s clip-path ease;
+  transform-origin: bottom right;
+}
+.inpt-1:focus ~ .spn-1::before,.inpt-1:not(:placeholder-shown) ~ .spn-1::before{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.inpt-1:focus ~ .lbl-1,.inpt-1:not(:placeholder-shown) ~ .lbl-1{
+  transform: scale(0.7) translateY(-21px);
+}
+
+.inpt-2{
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+
+.inpt-3{
+  position: relative;
+  border: 1px solid gray;
+  border-radius: 2px;
+
+}
+.lbl-3{
+  position: absolute;
+  left: 10px;
+  bottom: 9px;
+  transition: 1s transform ease;
+  background-color: none;
+  display: inline-block;
+  width: 2.3rem;
+  z-index: 100;
+  text-align: center;
+}
+.lbl-3::before{
+  content:" ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  transition: 1s clip-path ease;
+}
+.inpt-3:focus ~ .lbl-3,.inpt-3:not(:placeholder-shown) ~ .lbl-3{
+  transform: scale(0.7) translate(-10px,-25px);
+}
+.inpt-3:focus ~ .lbl-3::before,.inpt-3:not(:placeholder-shown) ~ .lbl-3::before{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.inpt-3:focus ~ .lbl-3{
+  color:rgb(34, 155, 255);
+}
+.inpt-3:focus{
+  outline: none;
+  border:2px solid rgb(34, 155, 255);
+}
+
+
+.inpt-4{
+  padding: 10px;
+  -webkit-box-shadow: 5px 5px 14px -1px rgba(0,0,0,0.56); 
+  box-shadow: 5px 5px 14px -1px rgba(0,0,0,0.56);
+  outline: none;
+  border: 1px solid black;
+  border-radius: 0;
+}
+.inpt-4:focus, .inpt-4:not(:placeholder-shown){
+  box-shadow: inset 5px 5px 14px -1px rgba(0,0,0,0.56);
+  transform: scale(0.97);
+}
+.div-5{
+  background-color: rgb(241, 241, 241);
+}
+
+.inpt-5{
+  padding: 10px;
+  outline: none;
+  box-shadow: inset 8px 13px 5px -11px rgba(184,184,184,0.6),
+  inset 13px 1px 5px -11px rgba(184,184,184,0.6),
+  inset 1px -13px 5px -11px rgba(255,255,255,0.6),
+  inset -13px 1px 5px -11px rgba(255,255,255,0.6);
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(241, 241, 241);
+}
+.ctn-6{
+  width: 40px;
+  height: 35px;
+  transition: 1s width ease;
+}
+.ctn-62{
+  width: 200px;
+}
+.inpt-6{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border:1px solid black;
+  border-radius: 5px;
+  padding: 10px 10px 10px 30px;
+}
+.bi-person{
+  position:absolute;
+  left: 12px;
+  transform: scale(1.3);
+}
+.ctn-7{
+  width: 200px;
+  height: 35px;
+  transition: 1s width ease;
+}
+.inpt-7{
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 30px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(34, 155, 255);
+}
+.inpt-7 ~ .bi-search{
+  position:absolute;
+  left:6px;
+  color:rgb(34, 155, 255);
+}
+
+.inpt-7:focus, .inpt-7:not(:placeholder-shown){
+  border-bottom: 2px solid blueviolet;
+}
+.inpt-7:focus ~ .bi-search, .inpt-7:not(:placeholder-shown) ~ .bi-search{
+  color:blueviolet;
+}
+.ctn-8{
+  width: 200px;
+  height: 35px;
+  transition: 1s width ease;
+}
+.inpt-8{
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 30px;
+  outline: none;
+  border: 1px solid black;
+  transition: 1s padding-left ease;
+}
+.inpt-8 ~.bi-search{
+  position:absolute;
+  left:6px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+  transition: 1s clip-path ease;
+}
+
+.inpt-8:focus, .inpt-8:not(:placeholder-shown){
+  padding-left: 10px;
+}
+.inpt-8:focus ~ .bi-search, .inpt-8:not(:placeholder-shown) ~ .bi-search{
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+.ctn-9{
+  width: 200px;
+  height: 35px;
+  position: relative;
+  transition: 1s width ease;
+}
+.inpt-9{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid black;
+  transition: 1s padding-left ease;
+}
+.inpt-9 ~ .bi-search.bi{
+  position:absolute;
+  right:6px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+  transition: 1s clip-path ease;
+}
+.inpt-9:focus ~ .bi-search{
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
